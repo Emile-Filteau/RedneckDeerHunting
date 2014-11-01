@@ -4,13 +4,11 @@ import math
 
 
 class World:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    def __init__(self):
 
         self.animals = []
         self.animals.append(Animal.Animal(40, 30, 10, 'M', 180))
-        self.animals.append(Animal.Animal(10, 5, 10, 'M', 180))
+        #self.animals.append(Animal.Animal(10, 5, 10, 'M', 180))
 
     def update(self, framerate, player):
         for animal in self.animals:
@@ -18,16 +16,18 @@ class World:
 
             distance = math.sqrt(math.pow(player.x - animal.x, 2) + math.pow(player.y - animal.y, 2))
             if distance > 200:
-                self.animals.remove(self.animals.index(animal))
+                self.animals.remove(animal)
+            """
             if len(self.animals) < 5:
                 #TODO : roll dice, spawn animal
                 print len(self.animals)
+            """
 
     def spawn_animal(self):
         return
         return
 
-    def draw(self, screen, player):
+    def draw(self, screen, resolution, player):
         """
         //MAP
         /*
@@ -50,25 +50,31 @@ class World:
         background_color = (0, 102, 0)
         screen.fill(background_color)
 
+        pygame.draw.rect(screen, (0, 100, 255), pygame.Rect(0, 0, resolution[0], resolution[1]/5))
+
         land_lines_color = (255, 255, 0)
-        for i in range(1, 70, 2):
-            j = i * 100 / 70
-            j = 100 - j + 20
-            pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1))
+        for i in range(0, 7*resolution[0]/16, 2):
+            j = float(i / float(7*resolution[0]/16))
+            j = resolution[1] - (j*resolution[1]) + (resolution[1]/5)
+            pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
 
-        for i in range(91, 160, 2):
-            j = (i-90) * 100 / 70 + 20
-            pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1))
+        for i in range(9*resolution[0]/16, resolution[0], 2):
+            j = float((i-9*resolution[0]/16) / float(7*resolution[0]/16))
+            j = (resolution[1]/5) + (j*resolution[1])
+            pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
 
-        x = 2
-        for j in range(20, 144, x):
-            x += 2
-            for i in range(0, 160, 4):
-                pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1))
+        for x in range(0, resolution[1]/5):
+            j = resolution[1]/5 + x*x
+            for i in range(0, resolution[0], 4):
+                pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
+
 
         #TODO : Draw them with depth
         for animal in self.animals:
-            animal.draw(screen, player)
+            animal.draw(screen, resolution, player)
+
+        if player.scoping:
+            pygame.draw.rect(screen, (0, 100, 255), pygame.Rect(0, 0, resolution[0], resolution[1]/5))
 
     def check_collision(self, player):
         """

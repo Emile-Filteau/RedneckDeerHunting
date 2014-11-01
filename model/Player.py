@@ -13,12 +13,11 @@ class Player:
         self.view_angle = 45
         self.move_distance = 5
 
-        self.score = 0
-
         self.selected_item = 0
 
         self.items = []
         self.items.append(Gun.Gun())
+        self.bullet_count = 12
 
         self.scope_angle_width = 0
         self.scope_angle_height = 0
@@ -27,15 +26,14 @@ class Player:
 
         self.world = world
 
-    def draw(self, screen):
-        pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(0, 0, 160, 20))
-
+    def draw(self, screen, resolution):
         if not self.scoping:
-            self.items[self.selected_item].draw(screen)
+            self.items[self.selected_item].draw(screen, resolution)
         else:
-            screen.blit(self.scope, pygame.Rect(0, 20))
+            image = pygame.transform.scale(self.scope, (resolution[0], int(4*resolution[1]/5.0)))
+            screen.blit(image, pygame.Rect(0, resolution[1]/5, resolution[0], resolution[1]-resolution[1]/5))
 
-    def shoot(self, direction):
+    def shoot(self):
         print 'SHOOT'
         self.world.check_collision(self)
         #self.make_noise(alot, false)
@@ -104,23 +102,23 @@ class Player:
             if self.scope_angle_width < self.view_angle/2 * -1:
                 self.scope_angle_width = self.view_angle/2 * -1
         elif direction == 'R':
-            self.scope_angle_width -= 1
+            self.scope_angle_width += 1
             if self.scope_angle_width > self.view_angle/2:
                 self.scope_angle_width = self.view_angle/2
         elif direction == 'U':
-            self.scope_angle_height += 1
-            if self.scope_angle_height > 45:
-                self.scope_angle_height = 45
+            self.scope_angle_height += 5
+            if self.scope_angle_height > 180:
+                self.scope_angle_height = 180
         elif direction == 'D':
-            self.scope_angle_height -= 1
-            if self.scope_angle_height < -45:
-                self.scope_angle_height = -45
+            self.scope_angle_height -= 5
+            if self.scope_angle_height < -180:
+                self.scope_angle_height = -180
 
     def use(self, which):
         if which == 'PRIMARY':
-            self.items[self.selected_item].usePrimary(self)
+            self.items[self.selected_item].use_primary(self)
         else:
-            self.items[self.selected_item].useSecondary(self)
+            self.items[self.selected_item].use_secondary(self)
 
     def make_noise(self, amount, is_animal_friendly):
         #TODO Need to pass this to world (world.emitNoise(this, amount, isAnimalFriendly))

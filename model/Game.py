@@ -3,17 +3,27 @@ from Player import *
 
 
 class Game:
-    def __init__(self, camera_width, camera_height):
+    def __init__(self, resolution):
         self.current_frame = 0
-        self.camera_width = camera_width
-        self.camera_height = camera_height
+        self.resolution = resolution
+        self.font = pygame.font.SysFont("consolas", resolution[0]/20)
 
-        self.world = World(500, 500)
+        self.world = World()
         self.player = Player(self.world)
 
+        self.score = 0
+
     def draw(self, screen):
-        self.world.draw(screen, self.player)
-        self.player.draw(screen)
+        self.world.draw(screen, self.resolution, self.player)
+        self.player.draw(screen, self.resolution)
+
+        # render text
+        score_label = self.font.render("Score: " + str(self.score), 0, (0, 0, 0))
+        screen.blit(score_label, (2, 0))
+
+        bullets_label = self.font.render("Bullets: " + str(self.player.bullet_count), 0, (0, 0, 0))
+        screen.blit(bullets_label, (0, self.resolution[0]/20))
+
 
     def update(self, framerate):
         self.current_frame += framerate
@@ -21,25 +31,25 @@ class Game:
 
     def key_press(self, key):
         #ARROWS
-        if key == 39:
+        if key == 275:
             self.player.action('R')
-        elif key == 38:
+        elif key == 273:
             self.player.action('U')
-        elif key == 37:
+        elif key == 276:
             self.player.action('L')
-        elif key == 40:
+        elif key == 274:
             self.player.action('D')
         #Z
-        elif key == 90:
+        elif key == 122:
             self.player.action('PRIMARY')
         #X
-        elif key == 88:
+        elif key == 120:
             self.player.action('SECONDARY')
         #ENTER
         elif key == 13:
             return
         #SHIFT
-        elif key == 16:
+        elif key == 303:
             return
 """
 ADD KEY RELEASE YOU WANT TO CREATE FLUID MOVEMENT
