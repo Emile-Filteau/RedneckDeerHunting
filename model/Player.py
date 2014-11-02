@@ -4,14 +4,15 @@ import math
 
 
 class Player:
-    def __init__(self, world):
+    def __init__(self, game):
         self.x = 0
         self.y = 0
         self.angle = 0
 
         self.depth_of_field = 100
         self.view_angle = 45
-        self.move_distance = 5
+        self.move_distance = 2
+        self.move_direction = ""
 
         self.selected_item = 0
 
@@ -24,7 +25,9 @@ class Player:
         self.scoping = False
         self.scope = pygame.image.load("images/scope.png")
 
-        self.world = world
+        self.foot_step = pygame.mixer.Sound('sounds/footstep.wav')
+
+        self.game = game
 
     def draw(self, screen, resolution):
         if not self.scoping:
@@ -34,22 +37,48 @@ class Player:
             screen.blit(image, pygame.Rect(0, resolution[1]/5, resolution[0], resolution[1]-resolution[1]/5))
 
     def shoot(self):
-        print 'SHOOT'
-        self.world.check_collision(self)
         #self.make_noise(alot, false)
+        cadran = self.get_look_cadran()
+        angle_theta = math.radians((self.angle % 90) + (self.view_angle/2 + self.scope_angle_width))
+        for p in range(0, self.depth_of_field*2):
+            check_collision = (0, 0)
+            if cadran == 0 or cadran == 2:
+                p_x = math.sin(angle_theta) * p
+                p_y = math.cos(angle_theta) * p
+            elif cadran == 1 or cadran == 3:
+                p_x = math.sin(angle_theta) * p
+                p_y = math.cos(angle_theta) * p
+            if cadran == 0:
+                check_collision = (self.x + p_x, self.y + p_y)
+            elif cadran == 1:
+                check_collision = (self.x - p_x, self.y + p_y)
+            elif cadran == 2:
+                check_collision = (self.x - p_x, self.y - p_y)
+            if cadran == 3:
+                check_collision = (self.x + p_x, self.y - p_y)
 
-    def action(self, key_action):
+            target = self.game.world.check_collision(self, check_collision)
+            if target:
+                self.game.kill(target)
+                return
+
+    def add_move_direction(self, key_action):
+        self.move_direction += key_action
+
+    def remove_move_direction(self, key_action):
+        if key_action in self.move_direction:
+            self.move_direction = self.move_direction.replace(key_action, "")
+
+    def action(self):
         if not self.scoping:
-            if key_action == 'R' or key_action == 'L':
-                self.rotate(key_action)
-            elif key_action == 'U' or key_action == 'D':
-                self.move(key_action)
+            if 'R' in self.move_direction or 'L' in self.move_direction:
+                self.rotate(self.move_direction)
+            if 'U' in self.move_direction or 'D' in self.move_direction:
+                self.move(self.move_direction)
         else:
-            if key_action == 'R' or key_action == 'L' or key_action == 'U' or key_action == 'D':
-                self.move_scope_perspective(key_action)
-
-        if key_action == 'PRIMARY' or key_action == 'SECONDARY':
-            self.use(key_action)
+            if 'R' in self.move_direction or 'L' in self.move_direction or \
+                    'U' in self.move_direction or 'D' in self.move_direction:
+                self.move_scope_perspective(self.move_direction)
 
     def move(self, direction):
         cadran = self.get_look_cadran()
@@ -62,9 +91,9 @@ class Player:
             delta_x = (self.move_distance * math.sin(self.degree_to_radian(angle_theta)) / math.sin(self.degree_to_radian(90)))
             delta_y = (self.move_distance * math.sin(self.degree_to_radian(angle_beta)) / math.sin(self.degree_to_radian(90)))
         foward = 0
-        if direction == 'U':
+        if 'U' in self.move_direction:
             foward = 1
-        elif direction == 'D':
+        elif 'D' in self.move_direction:
             foward = -1
 
         if cadran == 0:
@@ -79,6 +108,7 @@ class Player:
         elif cadran == 3:
             self.x += delta_x * foward
             self.y -= delta_y * foward
+        #self.foot_step.play()
 
     def degree_to_radian(self, degree):
         return degree * (math.pi / 180)
@@ -87,29 +117,29 @@ class Player:
         return math.floor(self.angle/90)
 
     def rotate(self, direction):
-        if direction == 'R':
-            self.angle += 2
+        if 'R' in self.move_direction:
+            self.angle += 10
             if self.angle >= 360:
                 self.angle %= 360
-        elif direction == 'L':
-            self.angle -= 2
+        elif 'L' in self.move_direction:
+            self.angle -= 10
             if self.angle < 0:
                 self.angle += 360
 
     def move_scope_perspective(self, direction):
-        if direction == 'L':
+        if 'L' in self.move_direction:
             self.scope_angle_width -= 1
             if self.scope_angle_width < self.view_angle/2 * -1:
                 self.scope_angle_width = self.view_angle/2 * -1
-        elif direction == 'R':
+        elif 'R' in self.move_direction:
             self.scope_angle_width += 1
             if self.scope_angle_width > self.view_angle/2:
                 self.scope_angle_width = self.view_angle/2
-        elif direction == 'U':
+        elif 'U' in self.move_direction:
             self.scope_angle_height += 5
             if self.scope_angle_height > 180:
                 self.scope_angle_height = 180
-        elif direction == 'D':
+        elif 'D' in self.move_direction:
             self.scope_angle_height -= 5
             if self.scope_angle_height < -180:
                 self.scope_angle_height = -180

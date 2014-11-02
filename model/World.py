@@ -1,14 +1,14 @@
 import pygame
 import Animal
-import math
+import math, random
 
 
 class World:
-    def __init__(self):
+    def __init__(self, resolution):
+        self.resolution = resolution
 
         self.animals = []
-        self.animals.append(Animal.Animal(40, 30, 10, 'M', 180))
-        #self.animals.append(Animal.Animal(10, 5, 10, 'M', 180))
+        self.animals.append(Animal.Animal(80, 0, 10, 'M', 180))
 
     def update(self, framerate, player):
         for animal in self.animals:
@@ -17,14 +17,20 @@ class World:
             distance = math.sqrt(math.pow(player.x - animal.x, 2) + math.pow(player.y - animal.y, 2))
             if distance > 200:
                 self.animals.remove(animal)
-            """
-            if len(self.animals) < 5:
-                #TODO : roll dice, spawn animal
-                print len(self.animals)
-            """
+
+        if len(self.animals) < 5:
+            if random.random() <= 0.2:
+                x = random.random()*50 + 50
+                if random.random() > 0.5:
+                    x *= -1
+                y = random.random()*50 + 50
+                if random.random() > 0.5:
+                    y *= -1
+                a = random.random()*10 + 5
+                w = random.random()*100 + 100
+                self.animals.append(Animal.Animal(player.x + x, player.y + y, a, 'M', w))
 
     def spawn_animal(self):
-        return
         return
 
     def draw(self, screen, resolution, player):
@@ -68,7 +74,6 @@ class World:
             for i in range(0, resolution[0], 4):
                 pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
 
-
         #TODO : Draw them with depth
         for animal in self.animals:
             animal.draw(screen, resolution, player)
@@ -76,10 +81,12 @@ class World:
         if player.scoping:
             pygame.draw.rect(screen, (0, 100, 255), pygame.Rect(0, 0, resolution[0], resolution[1]/5))
 
-    def check_collision(self, player):
-        """
-        "draw" a line where the gun is pointing (height?) of length = viewDepth (*2?)
-        for each points on this line, check if there is a Moose (animal width / height offsets)
-        when an animal is found, kill it and return it
-        """
-        return
+    def check_collision(self, player, position):
+        for animal in self.animals:
+            # size = animal.get_size_proportion(player, self.resolution)
+            # print (animal.x, animal.y), animal.image_width/2, position
+            width = (animal.image_width/2)/5
+            if position[0] > animal.x - width and position[0] < animal.x + width:
+                if position[1] > animal.y - width and position[1] <= animal.y + width:
+                    return animal
+        return None

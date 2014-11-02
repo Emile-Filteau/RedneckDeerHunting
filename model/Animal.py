@@ -136,6 +136,7 @@ class Animal:
     def draw(self, screen, resolution, player):
         distance = math.sqrt(math.pow(player.x - self.x, 2) + math.pow(player.y - self.y, 2))
 
+
         animal_angle = math.atan2(player.y - self.y, player.x - self.x)
         animal_angle += math.pi
         animal_angle *= (180/math.pi)
@@ -165,10 +166,10 @@ class Animal:
             delta_h -= 50
             relative_y += (relative_y * delta_h / 100)
 
-        new_width = float(self.image_width/160.0*resolution[0]) * size_proportion
-        new_height = float(self.image_height/144.0*resolution[1]) * size_proportion
+        new_width = resolution[0] * size_proportion
+        new_height = resolution[1] * size_proportion
         if 0 - new_width/2 < relative_x < resolution[0] + new_width/2:
-            if relative_y + new_height > resolution[1]/5 and relative_y < resolution[1]:
+            if relative_y + new_height/2 >= resolution[1]/5 and relative_y < resolution[1]:
                 image_rect = pygame.Rect(relative_x-new_width/2, relative_y-new_height/2, new_width, new_height)
                 if self.state == MOVE:
                     image = MOVE_IMAGES[self.look_direction][self.animation]
@@ -178,6 +179,12 @@ class Animal:
                     image = IDLE_IMAGES[self.look_direction]
                 image = pygame.transform.scale(image, (int(new_width), int(new_height)))
                 screen.blit(image, image_rect)
+
+    def get_size_proportion(self, player, resolution):
+        distance = math.sqrt(math.pow(player.x - self.x, 2) + math.pow(player.y - self.y, 2))
+        size_proportion = distance * 1.5 / player.depth_of_field
+        size_proportion = 1.5 - size_proportion
+        return resolution[0] * size_proportion, resolution[1] * size_proportion
 
     def get_degrees_between_player(self, player):
         angle = 0

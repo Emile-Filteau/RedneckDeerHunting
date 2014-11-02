@@ -8,8 +8,8 @@ class Game:
         self.resolution = resolution
         self.font = pygame.font.SysFont("consolas", resolution[0]/20)
 
-        self.world = World()
-        self.player = Player(self.world)
+        self.world = World(resolution)
+        self.player = Player(self)
 
         self.score = 0
 
@@ -22,66 +22,52 @@ class Game:
         screen.blit(score_label, (2, 0))
 
         bullets_label = self.font.render("Bullets: " + str(self.player.bullet_count), 0, (0, 0, 0))
-        screen.blit(bullets_label, (0, self.resolution[0]/20))
+        screen.blit(bullets_label, (0, self.resolution[1]/20))
 
+        bullets_label = self.font.render("X: " + str(self.player.x) + " Y: " + str(self.player.y), 0, (0, 0, 0))
+        screen.blit(bullets_label, (0, self.resolution[1]/10))
+
+        bullets_label = self.font.render("Angle: " + str(self.player.angle), 0, (0, 0, 0))
+        screen.blit(bullets_label, (0, 1.5*self.resolution[1]/10))
 
     def update(self, framerate):
         self.current_frame += framerate
+        self.player.action()
         self.world.update(framerate, self.player)
+
+    def kill(self, animal):
+        self.score += animal.weight * animal.age
+        self.world.animals.remove(animal)
 
     def key_press(self, key):
         #ARROWS
         if key == 275:
-            self.player.action('R')
+            self.player.add_move_direction('R')
         elif key == 273:
-            self.player.action('U')
+            self.player.add_move_direction('U')
         elif key == 276:
-            self.player.action('L')
+            self.player.add_move_direction('L')
         elif key == 274:
-            self.player.action('D')
+            self.player.add_move_direction('D')
         #Z
         elif key == 122:
-            self.player.action('PRIMARY')
+            self.player.use('PRIMARY')
         #X
         elif key == 120:
-            self.player.action('SECONDARY')
+            self.player.use('SECONDARY')
         #ENTER
         elif key == 13:
             return
         #SHIFT
         elif key == 303:
             return
-"""
-ADD KEY RELEASE YOU WANT TO CREATE FLUID MOVEMENT
-    keyrelease : function(key) {
-        this.base(key);
-        //droite
-        if(key == 39) {
-        }
-        //haut
-        else if(key == 38) {
-        }
-        //gauche
-        else if(key == 37) {
-        }
-        //bas
-        else if(key == 40) {
-        }
-        //Z
-        else if(key == 90) {
 
-        }
-        //X
-        else if(key == 88) {
-
-        }
-        //ENTER
-        else if(key == 13) {
-
-        }
-        //SHIFT
-        else if(key == 16) {
-
-        }
-    }
-"""
+    def key_release(self, key):
+        if key == 275:
+            self.player.remove_move_direction('R')
+        elif key == 273:
+            self.player.remove_move_direction('U')
+        elif key == 276:
+            self.player.remove_move_direction('L')
+        elif key == 274:
+            self.player.remove_move_direction('D')
