@@ -19,9 +19,9 @@ class MainMenu:
             {'text': 'Exit'}
         ]
         self.background = pygame.transform.scale(pygame.image.load('images/background.jpg'), (resolution[0], resolution[1]))
-
+        pygame.mixer.music.load('sounds/menu_music.mp3')
+        pygame.mixer.music.play(-1)
         self.selected_item = 0
-
         self.target = pygame.transform.scale(pygame.image.load('images/target.png'), (50, 50))
 
     def draw(self, screen):

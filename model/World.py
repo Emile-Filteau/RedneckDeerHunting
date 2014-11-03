@@ -8,7 +8,8 @@ class World:
         self.resolution = resolution
 
         self.animals = []
-        self.animals.append(Animal.Animal(80, 0, 10, 'M', 180))
+        # self.animals.append(Animal.Animal(40, 30, 10, 'M', 180))
+        # self.animals.append(Animal.Animal(50, 30, 10, 'M', 180))
 
     def update(self, framerate, player):
         for animal in self.animals:
@@ -74,19 +75,15 @@ class World:
             for i in range(0, resolution[0], 4):
                 pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
 
-        #TODO : Draw them with depth
-        for animal in self.animals:
+        animal_buffer = sorted(self.animals, key=lambda animal: animal.distance(player))[::-1]
+        for animal in animal_buffer:
             animal.draw(screen, resolution, player)
 
         if player.scoping:
             pygame.draw.rect(screen, (0, 100, 255), pygame.Rect(0, 0, resolution[0], resolution[1]/5))
 
-    def check_collision(self, player, position):
+    def check_collision(self, player):
         for animal in self.animals:
-            # size = animal.get_size_proportion(player, self.resolution)
-            # print (animal.x, animal.y), animal.image_width/2, position
-            width = (animal.image_width/2)/5
-            if position[0] > animal.x - width and position[0] < animal.x + width:
-                if position[1] > animal.y - width and position[1] <= animal.y + width:
-                    return animal
+            if animal.check_bullet_collision(player, self.resolution):
+                return animal
         return None

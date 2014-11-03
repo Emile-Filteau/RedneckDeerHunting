@@ -37,30 +37,10 @@ class Player:
             screen.blit(image, pygame.Rect(0, resolution[1]/5, resolution[0], resolution[1]-resolution[1]/5))
 
     def shoot(self):
-        #self.make_noise(alot, false)
-        cadran = self.get_look_cadran()
-        angle_theta = math.radians((self.angle % 90) + (self.view_angle/2 + self.scope_angle_width))
-        for p in range(0, self.depth_of_field*2):
-            check_collision = (0, 0)
-            if cadran == 0 or cadran == 2:
-                p_x = math.sin(angle_theta) * p
-                p_y = math.cos(angle_theta) * p
-            elif cadran == 1 or cadran == 3:
-                p_x = math.sin(angle_theta) * p
-                p_y = math.cos(angle_theta) * p
-            if cadran == 0:
-                check_collision = (self.x + p_x, self.y + p_y)
-            elif cadran == 1:
-                check_collision = (self.x - p_x, self.y + p_y)
-            elif cadran == 2:
-                check_collision = (self.x - p_x, self.y - p_y)
-            if cadran == 3:
-                check_collision = (self.x + p_x, self.y - p_y)
-
-            target = self.game.world.check_collision(self, check_collision)
-            if target:
-                self.game.kill(target)
-                return
+        # self.make_noise(alot, false)
+        target = self.game.world.check_collision(self)
+        if target:
+            self.game.kill(target)
 
     def add_move_direction(self, key_action):
         self.move_direction += key_action

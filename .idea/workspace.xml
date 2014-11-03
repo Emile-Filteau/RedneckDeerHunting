@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RedeneckDearHunting$RedneckDearHunting.coverage" NAME="RedneckDearHunting Coverage Results" MODIFIED="1414959809088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedeneckDearHunting$RedneckDearHunting.coverage" NAME="RedneckDearHunting Coverage Results" MODIFIED="1415030050160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,14 +29,8 @@
       <file leaf-file-name="RedneckDearHunting.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="41" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-                <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-                <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-                <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-              </folding>
+            <state line="7" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1314">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,11 +38,8 @@
       <file leaf-file-name="MainMenu.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/MainMenu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="45" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1242">
-              <folding>
-                <marker date="1414958117479" expanded="true" signature="0:24" placeholder="import ..." />
-                <marker date="1414958117479" expanded="true" signature="42:2172" placeholder="..." />
-              </folding>
+            <state line="24" column="77" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1224">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,19 +47,18 @@
       <file leaf-file-name="Game.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
+            <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1404">
               <folding>
-                <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
                 <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Player.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="28" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.7777778" vertical-offset="1818" max-vertical-offset="2844">
+            <state line="41" column="18" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2484">
               <folding />
             </state>
           </provider>
@@ -83,14 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="World.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="World.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/World.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="41" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
-              </folding>
+            <state line="11" column="66" selection-start="296" selection-end="296" vertical-scroll-proportion="0.3246493" vertical-offset="0" max-vertical-offset="1656">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +85,7 @@
       <file leaf-file-name="Animal.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Animal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="179" column="50" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="2832" max-vertical-offset="3942">
+            <state line="222" column="14" selection-start="8391" selection-end="8391" vertical-scroll-proportion="0.0" vertical-offset="3548" max-vertical-offset="4698">
               <folding />
             </state>
           </provider>
@@ -118,18 +105,18 @@
         <option value="$PROJECT_DIR$/model/Item.py" />
         <option value="$PROJECT_DIR$/model/__init__.py" />
         <option value="$PROJECT_DIR$/model/Gun.py" />
-        <option value="$PROJECT_DIR$/model/Animal.py" />
         <option value="$PROJECT_DIR$/model/Game.py" />
-        <option value="$PROJECT_DIR$/model/World.py" />
-        <option value="$PROJECT_DIR$/model/MainMenu.py" />
         <option value="$PROJECT_DIR$/RedneckDearHunting.py" />
+        <option value="$PROJECT_DIR$/model/MainMenu.py" />
         <option value="$PROJECT_DIR$/model/Player.py" />
+        <option value="$PROJECT_DIR$/model/Animal.py" />
+        <option value="$PROJECT_DIR$/model/World.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1679" />
-    <option name="y" value="309" />
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
     <option name="width" value="1368" />
     <option name="height" value="742" />
   </component>
@@ -399,7 +386,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1679" y="309" width="1368" height="742" extended-state="6" />
+    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -407,11 +394,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22254759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22254759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39936775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1734375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1734375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -421,6 +408,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39936775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22254759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1734375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -439,6 +446,108 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MainMenu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="45" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="1242">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1404">
+          <folding>
+            <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="31" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="2844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Gun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/World.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="41" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Animal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="50" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="3222" max-vertical-offset="3978">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MainMenu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="45" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="1242">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1404">
+          <folding>
+            <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="28" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.0" vertical-offset="2232" max-vertical-offset="2844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Gun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/World.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="41" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Animal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="50" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="3222" max-vertical-offset="3978">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/Gun.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="32" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="594">
@@ -455,18 +564,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="8" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="270">
-          <folding />
-        </state>
+        <state line="2" column="8" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="270" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/World.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="11" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1548">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="31" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1854">
           <folding>
-            <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
             <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
           </folding>
         </state>
@@ -490,13 +593,7 @@
     <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="26" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1134">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -517,10 +614,7 @@
     <entry file="file://$PROJECT_DIR$/model/World.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="35" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1584">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="29" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1476">
           <folding>
-            <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
             <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
           </folding>
         </state>
@@ -537,13 +630,7 @@
     <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="15" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1116">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,10 +658,7 @@
     <entry file="file://$PROJECT_DIR$/model/World.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="67" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1584">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -582,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="29" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1476">
           <folding>
-            <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
             <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
           </folding>
         </state>
@@ -591,13 +674,7 @@
     <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="39" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1098">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -625,10 +702,7 @@
     <entry file="file://$PROJECT_DIR$/model/World.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="11" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0" vertical-offset="236" max-vertical-offset="1512">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -636,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="29" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1476">
           <folding>
-            <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
             <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
           </folding>
         </state>
@@ -645,13 +718,7 @@
     <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="12" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1044">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,24 +755,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="8" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
+        <state line="2" column="8" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Animal.py">
+    <entry file="file://$PROJECT_DIR$/model/Game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="50" selection-start="6427" selection-end="6427" vertical-scroll-proportion="0.0" vertical-offset="2832" max-vertical-offset="3942">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/World.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
+        <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414955234987" expanded="true" signature="62:3346" placeholder="..." />
+            <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -717,42 +774,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Game.py">
+    <entry file="file://$PROJECT_DIR$/model/MainMenu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="500" selection-end="614" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
-          <folding>
-            <marker date="1414954356411" expanded="true" signature="54:2328" placeholder="..." />
-            <marker date="1414954356411" expanded="true" signature="1296:1387" placeholder="..." />
-          </folding>
+        <state line="24" column="77" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1224">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MainMenu.py">
+    <entry file="file://$PROJECT_DIR$/model/Animal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="45" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.0" vertical-offset="636" max-vertical-offset="1242">
-          <folding>
-            <marker date="1414958117479" expanded="true" signature="0:24" placeholder="import ..." />
-            <marker date="1414958117479" expanded="true" signature="42:2172" placeholder="..." />
-          </folding>
+        <state line="222" column="14" selection-start="8391" selection-end="8391" vertical-scroll-proportion="0.0" vertical-offset="3548" max-vertical-offset="4698">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RedneckDearHunting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1414959695215" expanded="true" signature="134:2224" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="199:938" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="977:1100" placeholder="..." />
-            <marker date="1414959695215" expanded="true" signature="1132:2224" placeholder="..." />
-          </folding>
+        <state line="7" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1314">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="28" selection-start="4645" selection-end="4645" vertical-scroll-proportion="0.7777778" vertical-offset="1818" max-vertical-offset="2844">
+        <state line="41" column="18" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/World.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="66" selection-start="296" selection-end="296" vertical-scroll-proportion="0.3246493" vertical-offset="0" max-vertical-offset="1656">
           <folding />
         </state>
       </provider>
