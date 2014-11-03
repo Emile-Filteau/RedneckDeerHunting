@@ -3,7 +3,7 @@ from Player import *
 
 
 class Game:
-    def __init__(self, resolution):
+    def __init__(self, controller, resolution):
         self.current_frame = 0
         self.resolution = resolution
         self.font = pygame.font.SysFont("consolas", resolution[0]/20)
@@ -38,6 +38,9 @@ class Game:
     def kill(self, animal):
         self.score += animal.weight * animal.age
         self.world.animals.remove(animal)
+
+    def end(self):
+        return
 
     def key_press(self, key):
         #ARROWS

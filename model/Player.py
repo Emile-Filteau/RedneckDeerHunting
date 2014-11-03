@@ -41,6 +41,8 @@ class Player:
         target = self.game.world.check_collision(self)
         if target:
             self.game.kill(target)
+        if self.bullet_count == 0:
+            self.game.end()
 
     def add_move_direction(self, key_action):
         self.move_direction += key_action

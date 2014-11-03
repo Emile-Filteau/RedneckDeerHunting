@@ -23,7 +23,7 @@ class RedneckDearHunting:
         pygame.display.set_icon(pygame.image.load('images/Mooses/idle_left.png'))
 
         self.main_menu = MainMenu(self, resolution)
-        self.game = Game(resolution)
+        self.game = Game(self, resolution)
 
         self.views = [
             {'name': 'main_menu', 'content': self.main_menu},
