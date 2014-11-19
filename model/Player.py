@@ -1,6 +1,7 @@
 import pygame
 import Gun
 import math
+from Animal import *
 
 
 class Player:
@@ -10,7 +11,7 @@ class Player:
         self.angle = 0
 
         self.depth_of_field = 100
-        self.view_angle = 45
+        self.view_angle = 90
         self.move_distance = 2
         self.move_direction = ""
 
@@ -40,7 +41,10 @@ class Player:
         # self.make_noise(alot, false)
         target = self.game.world.check_collision(self)
         if target:
-            self.game.kill(target)
+            if type(target) is Animal:
+                self.game.kill(target)
+            else:
+                print 'You shot a tree =/'
         if self.bullet_count == 0:
             self.game.end()
 

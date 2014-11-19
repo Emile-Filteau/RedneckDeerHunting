@@ -1,5 +1,6 @@
 import pygame
 import Animal
+import Tree
 import math, random
 
 
@@ -8,6 +9,10 @@ class World:
         self.resolution = resolution
 
         self.animals = []
+        self.trees = []
+
+        for i in range(0, 500):
+            self.trees.append(Tree.Tree(random.randint(-500, 500), random.randint(-500, 500)))
         # self.animals.append(Animal.Animal(40, 30, 10, 'M', 180))
         # self.animals.append(Animal.Animal(50, 30, 10, 'M', 180))
 
@@ -75,15 +80,26 @@ class World:
             for i in range(0, resolution[0], 4):
                 pygame.draw.rect(screen, land_lines_color, pygame.Rect(i, j, 1, 1), 1)
 
-        animal_buffer = sorted(self.animals, key=lambda animal: animal.distance(player))[::-1]
-        for animal in animal_buffer:
-            animal.draw(screen, resolution, player)
+
+
+        targets = self.animals + self.trees
+        targets = sorted(targets, key=lambda target: target.distance(player))[::-1]
+        for target in targets:
+            target.draw(screen, resolution, player)
+        # animal_buffer = sorted(self.animals, key=lambda animal: animal.distance(player))[::-1]
+        # for animal in animal_buffer:
+        #     animal.draw(screen, resolution, player)
+        #
+        # tree_buffer = sorted(self.trees, key=lambda tree: tree.distance(player))[::-1]
+        # for tree in tree_buffer:
+        #     tree.draw(screen, resolution, player)
 
         if player.scoping:
             pygame.draw.rect(screen, (0, 100, 255), pygame.Rect(0, 0, resolution[0], resolution[1]/5))
 
     def check_collision(self, player):
-        for animal in self.animals:
-            if animal.check_bullet_collision(player, self.resolution):
-                return animal
+        targets = self.animals + self.trees
+        for target in targets:
+            if target.check_bullet_collision(player, self.resolution):
+                return target
         return None

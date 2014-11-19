@@ -53,6 +53,9 @@ class MainMenu:
         elif key == 13:
             self.execute()
 
+    def key_release(self, key):
+        return
+
     def execute(self):
         if self.selected_item == 0:
             self.controller.change_view('game')

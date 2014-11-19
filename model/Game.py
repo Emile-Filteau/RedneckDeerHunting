@@ -4,6 +4,7 @@ from Player import *
 
 class Game:
     def __init__(self, controller, resolution):
+        self.controller = controller
         self.current_frame = 0
         self.resolution = resolution
         self.font = pygame.font.SysFont("consolas", resolution[0]/20)
@@ -40,6 +41,7 @@ class Game:
         self.world.animals.remove(animal)
 
     def end(self):
+        self.controller.change_view('main_menu')
         return
 
     def key_press(self, key):
